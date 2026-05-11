@@ -184,9 +184,9 @@ def lambda_handler(event, context):
             response_body['trialset_id'] = vals['trialset_id']
         if vals['platform'] == 'prolific': # Redirect if the participant is from Prolific
             if vals['request_purpose'] == 'store_session_data':
-                response_body["redirectUrl"] = f"https://app.prolific.co/submissions/complete?cc={COMPLETION_CODE}"
+                response_body["redirectUrl"] = f"https://app.prolific.com/submissions/complete?cc={COMPLETION_CODE}"
             elif vals['request_purpose'] == 'store_session_data_screen_out':
-                response_body["redirectUrl"] = f"https://app.prolific.co/submissions/complete?cc={SCREEN_OUT_CODE}"
+                response_body["redirectUrl"] = f"https://app.prolific.com/submissions/complete?cc={SCREEN_OUT_CODE}"
 
         return {
             'statusCode': 200,
@@ -210,9 +210,9 @@ def lambda_handler(event, context):
         }
         if vals['platform'] == 'prolific': # Redirect if the participant is from Prolific
             if vals['request_purpose'] == 'store_session_data':
-                response_body["redirectUrl"] = f"https://app.prolific.co/submissions/complete?cc={COMPLETION_CODE}"
+                response_body["redirectUrl"] = f"https://app.prolific.com/submissions/complete?cc={COMPLETION_CODE}"
             elif vals['request_purpose'] == 'store_session_data_screen_out':
-                response_body["redirectUrl"] = f"https://app.prolific.co/submissions/complete?cc={SCREEN_OUT_CODE}"
+                response_body["redirectUrl"] = f"https://app.prolific.com/submissions/complete?cc={SCREEN_OUT_CODE}"
         return {
             'statusCode': 500,
             'headers': {
